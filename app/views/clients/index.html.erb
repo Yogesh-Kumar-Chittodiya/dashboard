@@ -1,0 +1,30 @@
+<%= render 'header' %>
+
+<h1>Welcome Clients!</h1>
+
+
+
+
+<%# , style: 'position:relative; bottom:17vh;left:83vw;' %>
+
+    <h2 class="text-center mt-3">Client Details</h2>
+<table border=2  class="col-lg-8 mx-auto mt-3" >
+    <thead class="bg-primary">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>address</th>
+        </tr> 
+    </thead>
+    <tbody class="bg-light">
+    <% @client.each do |client| %>
+        <tr>
+            <td><%= client.id %></td>
+            <td><%= client.name %></td>
+            <td><%= client.email %></td>
+            <td><%= client.address %></td>
+        </tr>
+    <%end%>
+    </tbody>
+</table>
